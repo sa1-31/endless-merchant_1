@@ -138,11 +138,11 @@ main {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.75);
-  display: flex;
+  display: none;              /* 🔥 DEFAULT GİZLİ */
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
-
 .modal-box {
   background: #111;
   padding: 1.5rem;
@@ -180,4 +180,7 @@ footer {
   padding: 0.8rem;
   font-size: 0.8rem;
   opacity: 0.6;
+}
+.modal.active {
+  display: flex;
 }
