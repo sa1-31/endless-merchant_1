@@ -43,16 +43,20 @@ function renderProducts(){
   });
 }
 
+function updateCartCount(){
+  const count = cart.length;
+  const span = document.getElementById('cart-count');
+  if(span) span.innerText = count;
+}
+
 function addToCart(id){
   const product = products.find(p=>p.id===id);
-  
-  // Cart-a əlavə et
   cart.push(product);
 
-  // Alert / bildiriş
+  // Alert
   alert(product.name + ' added to cart!');
 
-  // Cart menyusuna say göstər
+  // Cart count yenilə
   updateCartCount();
 }
 
