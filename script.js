@@ -105,10 +105,12 @@ function closeConfirm(){
 }
 
 function confirmOrder(){
-orders.push({
-  status: 'On the way',
-  items: groupItems(cart)
-});
+  orders.push(groupItems(cart));  // order
+  cart = [];                       // cart
+  updateCartCount();               //uray
+  closeConfirm();                  // mo
+  showView('orders');              // o
+}
   cart = [];
   closeConfirm();
   showView('orders');
